@@ -1,0 +1,98 @@
+//create a user
+POST http://localhost:5000/users
+Content-Type: application/json
+
+{
+    "name":"Nông dân B",
+    "email":"nongdanb@gmail.com",
+    "password":"123456",
+    "confPassword":"123456",
+    "role":"user"
+    
+}
+###
+//get ALL Users
+GET http://localhost:5000/users
+
+###
+//Get Single user
+GET http://localhost:5000/users/00097015-0bd9-4eac-9ef1-6a3e1f0f7a27
+
+###
+//Update a user
+PATCH  http://localhost:5000/users/00097015-0bd9-4eac-9ef1-6a3e1f0f7a27
+Content-Type: application/json
+
+{
+    "name":"Minh Thư Update1",
+    "email":"admin@gmail.com",
+    "password":"",
+    "confPassword":"",
+    "role":"admin"
+    
+}
+###
+//delete
+DELETE http://localhost:5000/users/cc3af87f-04d7-407f-a512-3b1022c41d95
+
+###
+//login
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"nongdanb@gmail.com",
+    "password":"123456"
+    
+}
+###
+//login admin
+POST http://localhost:5000/login
+Content-Type: application/json
+
+{
+    "email":"admin@gmail.com",
+    "password":"123456"
+    
+}
+###
+//ME
+Get http://localhost:5000/me
+
+###
+//logout
+DELETE  http://localhost:5000/logOut
+
+###
+//get all product
+GET http://localhost:5000/product
+
+###
+//Post data product
+POST http://localhost:5000/product
+Content-Type: application/json
+
+{
+    "name":"Product 2",
+    "price":10000,
+    "stock":500
+    
+}
+###
+//Get product by id
+GET http://localhost:5000/product/ef8ef31e-4a46-452d-99cb-ca175e073bf2
+
+###
+//Update data product
+PATCH  http://localhost:5000/product/ef8ef31e-4a46-452d-99cb-ca175e073bf2
+Content-Type: application/json
+
+{
+    "name":"Product 2 updated",
+    "price":10000,
+    "stock":500
+    
+}
+###
+//delete data product
+DELETE   http://localhost:5000/product/ef8ef31e-4a46-452d-99cb-ca175e073bf2
