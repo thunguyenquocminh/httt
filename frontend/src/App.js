@@ -9,13 +9,14 @@ import AddUser from "./pages/AddUser";
 import EditUser from "./pages/EditUser";
 import AddProduct from "./pages/AddProduct";
 import EditProduct from "./pages/EditProduct";
-
+import SignUp from "./components/SignUp";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Login />} />{" "}
+          <Route path="/signup" element={<SignUp />} />{" "}
           <Route path="/dashboard" element={<Dashboard />} />{" "}
           <Route path="/users" element={<Users />} />{" "}
           <Route path="/users/add" element={<AddUser />} />{" "}

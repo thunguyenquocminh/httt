@@ -12,15 +12,19 @@ const  Navbar = ()=> {
     navigate("/");
   };
   return <div>
-    <nav className="navbar is-fixed-top has-shadow" role="navigation" aria-label="main navigation">
-      <div className="navbar-brand">
+    <nav className="navbar is-fixed-top has-shadow is-success" role="navigation" aria-label="main navigation">
+      <div className="navbar-brand ">
         <NavLink to="/dashboard" className="navbar-item" >
           <img src={logo}
           width="30"
            height="120"
            alt="logo"/>
         </NavLink>
-         
+        <div className="navbar-center">
+          <div className="navbar-item">
+         <h1 className="subtitle"><strong> Agricon App </strong></h1>
+         </div>
+         </div>
         <a href= '!#' role="button" className="navbar-burger burger" aria-label="menu" aria-expanded="false" data-target="navbarBasicExample">
           <span aria-hidden="true"></span>
           <span aria-hidden="true"></span>
@@ -35,7 +39,7 @@ const  Navbar = ()=> {
             <div className="buttons">
              
               <button onClick={logout} className="button is-light">
-                Log out
+                Đăng xuất
               </button>
 
             </div>

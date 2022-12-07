@@ -27,7 +27,14 @@ export const getUserById = async(req, res) => {
 };
 
 export const createUser = async(req, res) => {
+
     const { name, email, password, confPassword, role } = req.body;
+    const user = await Users.findOne({
+        where: {
+            email: email,
+        }
+    });
+    if (user) return res.status(404).json({ msg: "User has already exist!!" });
     if (password !== confPassword)
         return res
             .status(400)

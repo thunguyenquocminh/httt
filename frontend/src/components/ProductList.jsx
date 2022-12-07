@@ -29,7 +29,7 @@ const ProductList = () => {
               <th>Giá</th>
               <th>Số lượng</th>
               <th> Tạo bởi</th>
-              <th>Hoạt động</th>
+              <th>Tùy chỉnh</th>
           </tr>
       </thead>
       <tbody>
@@ -45,13 +45,13 @@ const ProductList = () => {
                   to={`/product/edit/${product.uuid}`}
                   className="button is-small is-info"
                 >
-                  Edit
+                  Sửa
                 </Link>
                 <button
                   onClick={() => deleteProduct(product.uuid)}
                   className="button is-small is-danger"
                 >
-                  Delete
+                  Xóa
                 </button>
               </td>
             </tr>

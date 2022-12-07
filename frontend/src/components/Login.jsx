@@ -1,6 +1,6 @@
 import React ,{ useState, useEffect }from "react";
 import {useDispatch, useSelector} from "react-redux";
-import { useNavigate } from "react-router-dom";
+import { NavLink,useNavigate } from "react-router-dom";
 import {LoginUser,reset} from "../features/authSlice";
 
 
@@ -24,14 +24,14 @@ const Login = () => {
 
   return (
     <div>
-      <section className="hero has-background-grey-light is-fullheight is-fullwidth">
-        <div className="hero-body">
+      <section className="hero is-fullheight is-fullwidth" >
+        <div className="hero-body has-background-light">
           <div className="container">
             <div className="columns is-centered">
               <div className="column is-4">
                 <form onSubmit={Auth} className="box">
                  { isError && <p className="has-text-centered">{message}</p>}
-                <h1 className="title is-3">Đăng Nhập</h1>
+                <h1 className="title is-4 ">Đăng Nhập</h1>
                   <div className="field">
                     <lable className="label">Email/ Tên đăng nhập</lable>
                     <div className="control">
@@ -58,6 +58,9 @@ const Login = () => {
                   <div className="field mt-5">
                    <button type="submit" className="button is-succcess is-fullwidth">{isLoading? 'Loading...':"Đăng nhập"}</button>
                   </div>
+                  <NavLink to={"/signup"}>
+               Chưa có tài khoản? Đăng ký ngay.
+            </NavLink>
                 </form>
               </div>
             </div>
