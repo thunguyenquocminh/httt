@@ -16,8 +16,6 @@ During my time at Vietnam National University, Ho Chi Minh City, I worked on a p
 - **Backend Development**: Using Node.js and Express.js
 - **Data Visualization and Reporting**
 
-### Cloud Services
-- **AWS**: For hosting and deployment
 
 ## Project Highlights
 
